@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:  0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #0F4C81;
+}
+
+.title{
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: #f2f2f2;
+    margin-right: 3rem;
+
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+    transition: .3s;
+}
+
+.navbar-links li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display:block;
+}
+
+.navbar-links li :hover {
+    background-color: rgba(59, 121, 255, 0.5);
+    transition: .3s;
+}
+
+.toggle {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#logo{
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#introduccion{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-image: url('/img/pxfuel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#introduccion p{
+    background-color: rgba(26, 213, 255, 0.5);
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #480000;
+}
+
+#separador{
+    height: 80px;
+    background-image: url('/img/divisor.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+}
+.sectionDigimones{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.sectionDigimones h2{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#titulo2{
+    font-size: 80px;
+    color: #ffff;
+	-webkit-text-stroke: 3px #0F4C81;
+}
+
+#introDigimons{
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+#introDigimons-img{
+    float: left;
+    width: 60%;
+
+}
+
+#introDigimons-img img{
+    max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+#introDigimons-p{
+    margin: auto;
+    float: right;
+    width: 60%;
+
+
+}
+
+#introDigimons-p p{
+    margin-top: 30px;
+    font-size: 2rem;
+    text-align: justify;
+}
+#digimon {
+    font-size: 15vmin;
+    position: absolute;
+}
+  
+  .border {
+    color: black;  
+    text-shadow:
+      -1px -1px 0 white, 
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white;  
+  }
+  
+  .wave {
+    color: #00FF00;
+    animation: wave 3s ease-in-out infinite;
+  }
+  
+  @keyframes wave {
+    0%, 100% {
+      clip-path: polygon(
+        0% 47%,
+        10% 48%,
+        33% 54%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+      );
+    }
+  }
+  
+ @media (max-width: 768px) {
+    #introDigimons {
+        flex-direction: column;
+    }
+ }
+@media (max-width: 660px) {
+
+    #introduccion p{
+        margin-top: 40%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+       
+    }
+
+    .toggle {
+        display: flex;
+
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
