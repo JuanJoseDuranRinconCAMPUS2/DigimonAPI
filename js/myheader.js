@@ -1,16 +1,7 @@
 async function getGames(){
     const url = 'https://digimon-api.vercel.app/api/digimon';
-    const options = {
-        method: 'GET',
-        headers: {
-            'content-type': 'application/octet-stream',
-            'X-RapidAPI-Key': 'aaf9cfa25cmsha84223450dcdb8ap18efb2jsn0e994f423e1f',
-            'X-RapidAPI-Host': 'videogames-news2.p.rapidapi.com'
-        }
-    };
-
     try {
-        const response = await fetch(url, options);
+        const response = await fetch(url);
         const result = await response.json();
         console.log(result);
     } catch (error) {
@@ -51,7 +42,30 @@ export default{
                       
         });
         wsPromise.then(() => {
+            getGames();
             navbar(); /* line 60 */
+        });
+    },
+
+    showDigimons(){
+        const wsDigimons = new Promise((resolve) => {
+            const ws = new Worker("./componets/wsMyHeader.js", {type: "module"});
+            let id = [];
+            let count = 0;
+            ws.postMessage({module:"displayIntroDigimons", data: this.data}) 
+            id = [".sectionDigimones"]
+            ws.addEventListener("message", (e)=>{
+                let doc = new DOMParser().parseFromString(e.data, "text/html");
+                document.querySelector(id[count]).append(...doc.body.children);
+                (id.length-1==0) ? ws.terminate(): count++;
+            if (count == 2) {
+                resolve();
+              }  
+            });
+                      
+        });
+        wsDigimons.then(() => {
+     
         });
     }
 }
