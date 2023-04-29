@@ -11,7 +11,7 @@ export let wsMyHeader = {
         <div class="navbar-links">
             <ul>
                 <li><a href="#introduccion">Digimon</a></li>
-                <li><a href="#">Digimons</a></li>
+                <li><a href="#introDigimons">Digimons</a></li>
                 <li><a href="#">Juegos De Digimon</a></li>
             </ul>
         </div>
