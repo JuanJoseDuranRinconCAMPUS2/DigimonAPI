@@ -7,7 +7,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('/img/fondo.jpg');
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@ body{
     font-size: 1.5rem;
     font-weight: bolder;
     text-align: center;
-    color: #480000;
+    color: #ffffff;
 }
 
 #separador{
@@ -111,6 +111,10 @@ body{
 .sectionDigimones{
     padding-top: 90px;
     padding-bottom: 90px;
+    background-image: url('/img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
 }
 
 .sectionDigimones h2{
@@ -166,6 +170,14 @@ body{
     
 }
 
+#digimonCards{
+    background-image: url('/img/fondo2.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
 main {
     padding: 2rem;
     max-width: 1000px;
