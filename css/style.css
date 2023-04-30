@@ -83,7 +83,7 @@ body{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-image: url('/img/pxfuel.jpg');
+    background-image: url('../img/pxfuel.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -104,7 +104,7 @@ body{
 
 #separador{
     height: 80px;
-    background-image: url('/img/divisor.jpg');
+    background-image: url('../img/divisor.jpg');
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
@@ -112,7 +112,7 @@ body{
 .sectionDigimones{
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url('/img/fondo.jpg');
+    background-image: url('../img/fondo.jpg');
     background-repeat: no-repeat;
     background-position:top;
     background-size: cover;
@@ -172,7 +172,7 @@ body{
 }
 
 #digimonCards{
-    background-image: url('/img/fondo2.jpg');
+    background-image: url('../img/fondo2.jpg');
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
@@ -254,7 +254,7 @@ main {
     position: absolute;
 }
 #juegosDigimon{
-    background-image: url('/img/fondo3.jpg');
+    background-image: url('../img/fondo3.jpg');
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
