@@ -22,7 +22,7 @@ function muestraDigimons(digimons) {
 }
 export default{
     showInterfazDigimons(){
-        async function getGames(){
+        async function getDigimons(){
             
             const url = 'https://digimon-api.vercel.app/api/digimon?limit=30';
             try {
@@ -38,18 +38,8 @@ export default{
             }
         }
 
-        getGames();
+        getDigimons();
+        }
     }
-}
 
 
-// const apiKey = 'ff31eeb8709b4c9dbaf5a640c17003e3';
-//             const url2 = `https://api.rawg.io/api/games?key=${apiKey}&search=digimon`;
-        
-//             fetch(url2)
-//             .then(response => response.json())
-//             .then(data => {
-//                 // Aquí puedes trabajar con los datos que devolvió la API
-//                 console.log(data);
-//             })
-//             .catch(error => console.log(error));

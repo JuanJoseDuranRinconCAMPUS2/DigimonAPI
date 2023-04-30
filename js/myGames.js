@@ -1,0 +1,79 @@
+function muestraGames(games) {
+    const wsDigimons = new Promise((resolve) => {
+        const ws = new Worker("./componets/wsMyGames.js", {type: "module"});
+        let id = [];
+        let count = 0;
+        ws.postMessage({module:"displayGaleryElements", data: games}) 
+        id = [".container"]
+        ws.addEventListener("message", (e)=>{
+            let doc = new DOMParser().parseFromString(e.data, "text/html");
+            document.querySelector(id[count]).append(...doc.body.children);
+            (id.length-1==0) ? ws.terminate(): count++;
+        if (count <= 20) {
+            resolve();
+          }  
+        });
+                  
+    });
+    wsDigimons.then(() => {
+        console.log("hola");
+        let slideIndex = 1;
+        showSlides(slideIndex)
+
+        function plusSlides(n){
+            showSlides(slideIndex += n)
+        }
+        function currentSlide(n){
+            showSlides(slideIndex = n)
+        }
+
+        let prev = document.querySelector(".prev")
+        prev.addEventListener("click", (e)=>{
+            plusSlides(-1)
+        })
+        let next = document.querySelector(".next")
+        next.addEventListener("click", (e)=>{
+            plusSlides(1)
+        })
+        function showSlides(n){
+            let i;
+            let slides = document.querySelectorAll(".mySlides");
+            let quadrates = document.querySelectorAll(".quadrate"); 
+            if(n > slides.length) slideIndex = 1
+            if(n < 1) slideIndex = slides.length
+            for(i = 0; i < slides.length; i++){
+                slides[i].style.display = "none"
+            }
+            for(i = 0; i < quadrates.length;i++){
+                quadrates[i].className = quadrates[i].className.replace("active","")
+            }
+            slides[slideIndex-1].style.display = "block";
+            quadrates[slideIndex-1].className += " active";
+        }
+    });
+}
+
+
+
+
+export default{
+    showGalery(){
+        async function getGames(){
+            const apiKey = 'ff31eeb8709b4c9dbaf5a640c17003e3';
+            const url = `https://api.rawg.io/api/games?key=${apiKey}&page=1&search=digimon`;
+            try {
+                const response = await fetch(url);
+                let result = await response.json();
+                console.log(result);
+                result.results.forEach(val => {
+                    muestraGames(val) 
+                });  
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        getGames()
+    }
+
+}
