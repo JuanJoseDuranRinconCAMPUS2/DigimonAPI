@@ -35,7 +35,7 @@ export let wsMyHeader = {
         <h2 id="titulo2">¿Que son los Digimons?</h2>
         <div id="introDigimons">
             <div id="introDigimons-img"> 
-                <img src="/img/img1.jpg" alt="digimon">
+                <img src="./img/img1.jpg" alt="digimon">
             </div>
             <div id="introDigimons-p">
                 <p>
