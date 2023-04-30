@@ -4,7 +4,7 @@ export let wsMyGames = {
         <div class="mySlides">
                 <div class="card">
                     <div class="header">
-                        <div class="image" style="background-image: url(${p1.background_image ? p1.background_image : `../img/Digimon_Logo.webp`}); background-repeat: no-repeat;background-position:top; background-size: cover;">
+                        <div class="image" style="background-image: url(${p1.background_image ? p1.background_image : `/img/Digimon_Logo.webp`}); background-repeat: no-repeat;background-position:top; background-size: cover;">
 
                         </div>
                         <div class="date">
