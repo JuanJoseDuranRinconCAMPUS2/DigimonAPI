@@ -457,6 +457,9 @@ main {
         text-align: center;
        
     }
+    #titulo2{
+        font-size: 60px;
+    }
 
     .toggle {
         display: flex;
