@@ -2,7 +2,7 @@ export let wsMyHeader = {
     displayNavbar(p1){
         return`
         <nav class="navbar">
-        <div class="title">DigimonWiki</div>
+        <div id="title">DigimonWiki</div>
         <a href="#" class="toggle">
             <span class="bar"></span>
             <span class="bar"></span>
