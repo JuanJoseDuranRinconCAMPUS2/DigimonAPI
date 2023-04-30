@@ -13,7 +13,7 @@ export let wsMyHeader = {
                 <li><a href="#introduccion">Digimon</a></li>
                 <li><a href="#sectionDigimones">Digimons</a></li>
                 <li><a href="#digimonCards">Galeria</a></li>
-                <li><a href="#">Juegos De Digimon</a></li>
+                <li><a href="#juegosDigimon">Juegos De Digimon</a></li>
             </ul>
         </div>
     </nav>
@@ -35,7 +35,7 @@ export let wsMyHeader = {
         <h2 id="titulo2">¿Que son los Digimons?</h2>
         <div id="introDigimons">
             <div id="introDigimons-img"> 
-                <img src="/img/img1.jpg" alt="digimon">
+                <img src="./img/digimon.jpg" alt="digimon">
             </div>
             <div id="introDigimons-p">
                 <p>
